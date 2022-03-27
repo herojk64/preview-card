@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit);
+:root{
+    --sblue: hsl(215, 51%, 70%); /*Soft blue*/
+    --cyan : hsl(178, 100%, 50%); /*Cyan*/
+    --ocyan : hsl(178, 100%, 50%,0.4);
+    --vdbgblue: hsl(217, 54%, 11%); /*Very dark blue (main BG)*/
+    --vdblue: hsl(216, 50%, 16%);/* Very dark blue (card BG)*/
+    --vdlblue: hsl(215, 32%, 27%);/*Very dark blue (line) */
+    --white: hsl(0, 0%, 100%);
+    --weight300:300;
+    --weight400:400;
+    --weight600:600;
+    --font-size:18px;
+}
+
+*{
+    font-family: 'Outfit';
+    font-weight: var(--weight300);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+img{
+    margin:0;
+    padding:0;
+}
+
+/* pre defined  */
+.body_bg{
+    background-color: var(--vdbgblue);
+}
+
+.main_bg{
+    background-color: var(--vdblue);
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.grid{
+    display: grid;
+}
+
+.gap{
+    gap:1.3rem;
+}
+.icon_gap{
+    gap:0.3rem;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+.weight300{
+    font-weight: 300;
+}
+
+.weight400{
+    font-weight: 400;
+}
+
+.weight600{
+    font-weight: 600;
+}
+
+.font18{
+    font-size: var(--font-size);
+}
+
+.padding{
+    padding:1.5rem;
+}
+
+.padding-top{
+    padding-top:1rem;
+    padding-bottom: 0.5rem;
+}
+
+/* end of pre defined */
+
+/* custom targeted css */
+main{
+    
+    width:20rem;
+    margin:3rem;
+    border-radius: 1rem;
+}
+.img_container{
+    
+    position:relative;
+}
+.equi{
+    display: block;
+    border-radius: 0.5rem;
+    width:100%;
+}
+
+.view{
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    border-radius: 0.5rem;
+    background-color:var(--ocyan);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    opacity: 0;
+}
+.img_container:hover .overlay{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.avatar{
+    height:1.5rem;
+    width: 1.5rem;
+    border:2px solid var(--white);
+    border-radius: 100%;
+    margin-right:01rem;
+
+}
+.creator{
+    border-top:1px solid var(--vdlblue);
+}
+
+/* end of custom targeted css */
+
+/*coloring*/
+main h2{
+    color:var(--white);
+}
+main h2:hover{
+    cursor: pointer;
+    color:var(--cyan);
+}
+main p{
+    color:var(--sblue);
+}
+main p b{
+    color: var(--white);
+    font-weight: var(--weight300);
+}
+main p b:hover{
+    cursor: pointer;
+    color: var(--cyan);
+}
+.color3 span:nth-child(1){
+    color:var(--cyan);
+}
+.color3 span:nth-child(2){
+    color:var(--sblue);
+}
+/* end of coloring */
+
+/* media for mobile */
+@media screen and (max-width:375px) {
+    main{
+        margin:1.5rem;
+        padding: 1rem !important;;
+        width: 20rem;
+    }
+}
+/* end of media mobile */
